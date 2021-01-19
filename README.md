@@ -1,85 +1,92 @@
-# OpenTelemetry Specification
+![Envoy Logo](https://github.com/envoyproxy/artwork/blob/main/PNG/Envoy_Logo_Final_PANTONE.png)
 
-[![Checks](https://github.com/open-telemetry/opentelemetry-specification/workflows/Checks/badge.svg?branch=master)](https://github.com/open-telemetry/opentelemetry-specification/actions?query=workflow%3A%22Checks%22+branch%3Amaster)
-![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/open-telemetry/specification.svg)
+[Cloud-native high-performance edge/middle/service proxy](https://www.envoyproxy.io/)
 
-![OpenTelemetry Logo](https://opentelemetry.io/img/logos/opentelemetry-horizontal-color.png)
+Envoy is hosted by the [Cloud Native Computing Foundation](https://cncf.io) (CNCF). If you are a
+company that wants to help shape the evolution of technologies that are container-packaged,
+dynamically-scheduled and microservices-oriented, consider joining the CNCF. For details about who's
+involved and how Envoy plays a role, read the CNCF
+[announcement](https://www.cncf.io/blog/2017/09/13/cncf-hosts-envoy/).
 
-_Curious about what OpenTelemetry is? Check out our [website](https://opentelemetry.io) for an explanation!_
+[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/1266/badge)](https://bestpractices.coreinfrastructure.org/projects/1266)
+[![Azure Pipelines](https://dev.azure.com/cncf/envoy/_apis/build/status/11?branchName=main)](https://dev.azure.com/cncf/envoy/_build/latest?definitionId=11&branchName=main)
+[![Fuzzing Status](https://oss-fuzz-build-logs.storage.googleapis.com/badges/envoy.svg)](https://bugs.chromium.org/p/oss-fuzz/issues/list?sort=-opened&can=1&q=proj:envoy)
+[![Jenkins](https://powerci.osuosl.org/buildStatus/icon?job=build-envoy-static-master&subject=ppc64le%20build)](https://powerci.osuosl.org/job/build-envoy-static-master/)
 
-The OpenTelemetry specification describes the cross-language requirements and expectations for all OpenTelemetry implementations. Substantive changes to the specification must be proposed using the [OpenTelemetry Enhancement Proposal](https://github.com/open-telemetry/oteps) process. Small changes, such as clarifications, wording changes, spelling/grammar corrections, etc. can be made directly via pull requests.
+## Documentation
 
-Questions that needs additional attention can be brought to the regular
-specifications meeting. EU and US timezone friendly meeting is held every
-Tuesday at 8 AM pacific time. Meeting notes are held in the [google
-doc](https://docs.google.com/document/d/1-bCYkN-DWJq4jw1ybaDZYYmx-WAe6HnwfWbkm8d57v8/edit?usp=sharing).
-APAC timezone friendly meeting is held Tuesdays, 4PM pacific time. See
-[OpenTelemetry calendar](https://github.com/open-telemetry/community#calendar).
+* [Official documentation](https://www.envoyproxy.io/)
+* [FAQ](https://www.envoyproxy.io/docs/envoy/latest/faq/overview)
+* [Unofficial Chinese documentation](https://www.servicemesher.com/envoy/)
+* Watch [a video overview of Envoy](https://www.youtube.com/watch?v=RVZX4CwKhGE)
+([transcript](https://www.microservices.com/talks/lyfts-envoy-monolith-service-mesh-matt-klein/))
+to find out more about the origin story and design philosophy of Envoy
+* [Blog](https://medium.com/@mattklein123/envoy-threading-model-a8d44b922310) about the threading model
+* [Blog](https://medium.com/@mattklein123/envoy-hot-restart-1d16b14555b5) about hot restart
+* [Blog](https://medium.com/@mattklein123/envoy-stats-b65c7f363342) about stats architecture
+* [Blog](https://medium.com/@mattklein123/the-universal-data-plane-api-d15cec7a) about universal data plane API
+* [Blog](https://medium.com/@mattklein123/lyfts-envoy-dashboards-5c91738816b1) on Lyft's Envoy dashboards
 
-Escalations to technical committee may be made over the
-[e-mail](https://github.com/open-telemetry/community#tc-technical-committee).
-Technical committee holds regular meetings, notes are held
-[here](https://docs.google.com/document/d/17v2RMZlJZkgoPYHZhIFTVdDqQMIAH8kzo8Sl2kP3cbY/edit?usp=sharing).
+## Related
 
-## Table of Contents
+* [data-plane-api](https://github.com/envoyproxy/data-plane-api): v2 API definitions as a standalone
+  repository. This is a read-only mirror of [api](api/).
+* [envoy-perf](https://github.com/envoyproxy/envoy-perf): Performance testing framework.
+* [envoy-filter-example](https://github.com/envoyproxy/envoy-filter-example): Example of how to add new filters
+  and link to the main repository.
 
-- [Overview](specification/overview.md)
-- [Glossary](specification/glossary.md)
-- [Library Guidelines](specification/library-guidelines.md)
-  - [Package/Library Layout](specification/library-layout.md)
-  - [General error handling guidelines](specification/error-handling.md)
-- API Specification
-  - [Baggage](specification/baggage/api.md)
-    - [Propagators](specification/context/api-propagators.md)
-  - [Tracing](specification/trace/api.md)
-  - [Metrics](specification/metrics/api.md)
-- SDK Specification
-  - [Tracing](specification/trace/sdk.md)
-  - [Metrics](specification/metrics/sdk.md)
-  - [Resource](specification/resource/sdk.md)
-  - [Configuration](specification/sdk-configuration.md)
-- Data Specification
-  - [Semantic Conventions](specification/overview.md#semantic-conventions)
-  - [Protocol](specification/protocol/README.md)
-- About the Project
-  - [Timeline](#project-timeline)
-  - [Notation Conventions and Compliance](#notation-conventions-and-compliance)
-  - [Versioning](#versioning)
-  - [Acronym](#acronym)
-  - [Contributions](#contributions)
-  - [License](#license)
+## Contact
 
-## Project Timeline
+* [envoy-announce](https://groups.google.com/forum/#!forum/envoy-announce): Low frequency mailing
+  list where we will email announcements only.
+* [envoy-security-announce](https://groups.google.com/forum/#!forum/envoy-security-announce): Low frequency mailing
+  list where we will email security related announcements only.
+* [envoy-users](https://groups.google.com/forum/#!forum/envoy-users): General user discussion.
+* [envoy-dev](https://groups.google.com/forum/#!forum/envoy-dev): Envoy developer discussion (APIs,
+  feature design, etc.).
+* [envoy-maintainers](https://groups.google.com/forum/#!forum/envoy-maintainers): Use this list
+  to reach all core Envoy maintainers.
+* [Twitter](https://twitter.com/EnvoyProxy/): Follow along on Twitter!
+* [Slack](https://envoyproxy.slack.com/): Slack, to get invited go [here](https://envoyslack.cncf.io).
+  We have the IRC/XMPP gateways enabled if you prefer either of those. Once an account is created,
+  connection instructions for IRC/XMPP can be found [here](https://envoyproxy.slack.com/account/gateways).
+  * NOTE: Response to user questions is best effort on Slack. For a "guaranteed" response please email
+    envoy-users@ per the guidance in the following linked thread.
 
-The current project status as well as information on notable past releases is found at
-[the OpenTelemetry project page](https://opentelemetry.io/project-status/).
+Please see [this](https://groups.google.com/forum/#!topic/envoy-announce/l9zjYsnS3TY) email thread
+for information on email list usage.
 
-Information about current work and future development plans is found at the
-[specification development milestones](https://github.com/open-telemetry/opentelemetry-specification/milestones).
+## Contributing
 
-## Notation Conventions and Compliance
+Contributing to Envoy is fun and modern C++ is a lot less scary than you might think if you don't
+have prior experience. To get started:
 
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in the [specification](./specification/overview.md) are to be interpreted as described in [BCP 14](https://tools.ietf.org/html/bcp14) [[RFC2119](https://tools.ietf.org/html/rfc2119)] [[RFC8174](https://tools.ietf.org/html/rfc8174)] when, and only when, they appear in all capitals, as shown here.
+* [Contributing guide](CONTRIBUTING.md)
+* [Beginner issues](https://github.com/envoyproxy/envoy/issues?q=is%3Aopen+is%3Aissue+label%3Abeginner)
+* [Build/test quick start using docker](ci#building-and-running-tests-as-a-developer)
+* [Developer guide](DEVELOPER.md)
+* Consider installing the Envoy [development support toolchain](https://github.com/envoyproxy/envoy/blob/main/support/README.md), which helps automate parts of the development process, particularly those involving code review.
+* Please make sure that you let us know if you are working on an issue so we don't duplicate work!
 
-An implementation of the [specification](./specification/overview.md) is not compliant if it fails to satisfy one or more of the "MUST", "MUST NOT", "REQUIRED", "SHALL", or "SHALL NOT" requirements defined in the [specification](./specification/overview.md).
-Conversely, an implementation of the [specification](./specification/overview.md) is compliant if it satisfies all the "MUST", "MUST NOT", "REQUIRED", "SHALL", and "SHALL NOT" requirements defined in the [specification](./specification/overview.md).
+## Community Meeting
 
-## Versioning
+The Envoy team meets twice per month on Tuesday, alternating between 9am PT and 5PM PT. The public
+Google calendar is here: https://goo.gl/PkDijT
 
-Changes to the [specification](./specification/overview.md) are versioned according to [Semantic Versioning 2.0](https://semver.org/spec/v2.0.0.html) and described in [CHANGELOG.md](CHANGELOG.md). Layout changes are not versioned. Specific implementations of the specification should specify which version they implement.
+* Meeting minutes are [here](https://goo.gl/5Cergb)
+* Recorded videos are posted [here](https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA/videos?view=0&sort=dd&shelf_id=1)
 
-Changes to the change process itself are not currently versioned but may be independently versioned in the future.
+## Security
 
-## Acronym
+### Security Audit
 
-The official acronym used by the OpenTelemetry project is "OTel".
+A third party security audit was performed by Cure53, you can see the full report [here](docs/SECURITY_AUDIT.pdf).
 
-Please refrain from using "OT" in order to avoid confusion with the now deprecated "OpenTracing" project.
+### Reporting security vulnerabilities
 
-## Contributions
+If you've found a vulnerability or a potential vulnerability in Envoy please let us know at
+[envoy-security](mailto:envoy-security@googlegroups.com). We'll send a confirmation
+email to acknowledge your report, and we'll send an additional email when we've identified the issue
+positively or negatively.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for details on contribution process.
-
-## License
-
-By contributing to OpenTelemetry Specification repository, you agree that your contributions will be licensed under its [Apache 2.0 License](https://github.com/open-telemetry/specification/blob/master/LICENSE).
+For further details please see our complete [security release process](SECURITY.md).

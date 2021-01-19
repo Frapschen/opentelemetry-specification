@@ -1,26 +1,39 @@
-# IntelliJ IDEA
-.idea
-*.iml
-
-# Eclipse
+/bazel-*
+BROWSE
+/build
+/build_*
+*.bzlc
+.cache
+.clangd
 .classpath
+.clwb/
+/ci/bazel-*
+compile_commands.json
+cscope.*
+.deps
+.devcontainer.json
+/docs/landing_source/.bundle
+/generated
+.idea/
 .project
-.settings
-bin
-
-# NetBeans
-/.nb-gradle
-/.nb-gradle-properties
-
-# OS X
-.DS_Store
-
-# Emacs
+*.pyc
+**/pyformat
+SOURCE_VERSION
+.settings/
+*.sw*
+tags
+TAGS
+/test/coverage/BUILD
+/tools/spelling/.aspell.en.pws
+.vimrc
+.vs
+.vscode
+clang-tidy-fixes.yaml
+.gdb_history
+clang.bazelrc
+user.bazelrc
+CMakeLists.txt
+cmake-build-debug
+/linux
+bazel.output.txt
 *~
-\#*\#
-
-# Vim
-.swp
-
-# Misspell binary
-internal/tools/bin
